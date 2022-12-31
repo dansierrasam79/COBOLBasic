@@ -1,9 +1,9 @@
-****************************************************************** 
-* Author: Daniel Chakraborty 
-* Date: July 24 2021 
-* Purpose: Print Hello World 
-* Tectonics: cobc 
-****************************************************************** 
+/****************************************************************** 
+/* Author: Daniel Chakraborty 
+/* Date: July 24 2021 
+/* Purpose: Print Hello World 
+/* Tectonics: cobc 
+/****************************************************************** 
 IDENTIFICATION DIVISION. 
 PROGRAM-ID. HELLO-PROGRAM. 
 DATA DIVISION. 
