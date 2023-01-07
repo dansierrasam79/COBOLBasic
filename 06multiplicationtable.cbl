@@ -9,8 +9,8 @@ WORKING-STORAGE SECTION.
 	01 countVal PIC 99 VALUE 01. 
 	01 countValWord PIC X(2).
 	01 equalTo PIC X(1) VALUE "=". 
-	01 result PIC 99. 
-	01 resultWord PIC X(2). 
+	01 result PIC 999. 
+	01 resultWord PIC X(5). 
 	01 destWord PIC X(10). 
 PROCEDURE DIVISION. 
 TIMESTABLESCOMPUTATION. 
@@ -18,12 +18,12 @@ TIMESTABLESCOMPUTATION.
 	ACCEPT tables 
 	MOVE tables TO tableWord 
 	PERFORM 10 TIMES 
-	MOVE countVal TO countValWord 
-	COMPUTE result = countVal * tables 
-	MOVE result TO resultWord 
-	STRING tableWord, intoSign, countValWord, equalTo, resultWord DELIMITED BY SIZE INTO destWord 
-	END-STRING 
-	DISPLAY destWord
-	COMPUTE countVal = countVal + 1 
+	    MOVE countVal TO countValWord 
+	    COMPUTE result = countVal * tables 
+	    MOVE result TO resultWord 
+	    STRING tableWord, intoSign, countValWord, equalTo, resultWord DELIMITED BY SIZE INTO destWord 
+	    END-STRING 
+	    DISPLAY destWord
+	    COMPUTE countVal = countVal + 1 
 	END-PERFORM. 
-	STOP RUN. 
+	STOP RUN.
